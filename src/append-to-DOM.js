@@ -31,4 +31,11 @@ function appendtoDOM(data, title) {
   output.appendChild(statContainer);
 }
 
-export { appendtoDOM, displayData };
+async function appendIcon(iconId) {
+  let url = `http://openweathermap.org/img/wn/${iconId}.png`;
+  const weatherIcon = new Image();
+  weatherIcon.src = url;
+  output.appendChild(weatherIcon);
+}
+
+export { appendtoDOM, displayData, appendIcon };

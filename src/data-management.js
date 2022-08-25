@@ -1,4 +1,4 @@
-import { displayData } from './append-to-DOM';
+import { appendIcon, displayData } from './append-to-DOM';
 import { status } from './index';
 
 const dataManagement = (data) => {
@@ -13,9 +13,10 @@ const dataManagement = (data) => {
     wind: data.wind.speed, //m/s
     coutry: data.sys.country,
     clouds: data.clouds.all, //%
+    icon: data.weather[0].icon,
   };
-
   displayData(location, status.system);
+  appendIcon(location.icon);
 };
 
 function alternateUnits(system) {
