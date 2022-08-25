@@ -26,16 +26,21 @@ function displayData(location, system) {
 
 function appendtoDOM(data, title) {
   const statContainer = document.createElement('div');
-  statContainer.setAttribute('id', 'data');
+  statContainer.setAttribute('id', data);
+  statContainer.setAttribute('class', 'data');
   statContainer.innerHTML = title + data;
+  console.log(data);
   output.appendChild(statContainer);
 }
 
 async function appendIcon(iconId) {
+  const iconContainer = document.createElement('div');
+  iconContainer.setAttribute('id', 'icon');
   let url = `http://openweathermap.org/img/wn/${iconId}.png`;
   const weatherIcon = new Image();
   weatherIcon.src = url;
-  output.appendChild(weatherIcon);
+  iconContainer.appendChild(weatherIcon);
+  output.appendChild(iconContainer);
 }
 
 export { appendtoDOM, displayData, appendIcon };

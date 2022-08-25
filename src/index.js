@@ -1,4 +1,3 @@
-import { alternateUnits } from './data-management';
 import './main.css';
 import { changeUnits, start } from './start';
 
@@ -6,6 +5,7 @@ const btn = document.getElementById('search');
 const city = document.getElementById('city');
 const country = document.getElementById('country');
 const output = document.getElementById('output');
+const outputText = document.getElementById('outputText');
 const unitsBtn = document.getElementById('units');
 
 let status = {
@@ -20,7 +20,7 @@ document.body.addEventListener('keydown', (event) => {
   }
 });
 
-btn.onclick = start;
+btn.onclick = start();
 
 unitsBtn.onclick = () => {
   if (status.loaded === true) {

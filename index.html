@@ -7,15 +7,55 @@
     <title>Weather-App</title>
   </head>
   <body>
-    <h1>Weather App</h1>
+    <div id="centralContainer">
+      <h1>Weather</h1>
+    </div>
 
-    <input type="text" id="city" placeholder="Enter Desired City" />
-    <input type="text" id="country" placeholder="Enter Country or State" />
-
-    <button id="search">Search</button>
-    <button id="units">Units</button>
-    <div><p id="output"></p></div>
+    <div id="input">
+      <div id="cityContainer">
+        <p>City</p>
+        <input
+          type="text"
+          id="city"
+          placeholder="Enter Desired City"
+          value="Heredia"
+        />
+      </div>
+      <div id="countryContainer">
+        <p>Country</p>
+        <input
+          type="text"
+          id="country"
+          placeholder="Enter Country or State"
+          value="CR"
+        />
+      </div>
+      <button id="search">Search</button>
+      <button id="units">Units</button>
+    </div>
+    <div id="output"><p id="outputText"></p></div>
 
     <script src="./dist/main.js"></script>
   </body>
+  <footer>
+    <div id="creator">
+      <a href="https://github.com/andrescn20" class="footerItem">
+        <p class="footerItem">
+          Created by: <span class="boldText"> andrescn20 </span>
+        </p>
+        <img
+          class="footerItem"
+          id="gitHubLogo"
+          src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-48.png"
+      /></a>
+    </div>
+    <div id="credits">
+      <a
+        class="footerItem"
+        href="https://www.freepik.com/free-vector/beautiful-illustration-sunny-landscape_16607912.htm#query=landscape&position=3&from_view=search"
+        >Image by macrovector</a
+      >
+      on <a class="footerItem" href="https://www.freepik.com/">Freepik</a>
+    </div>
+  </footer>
 </html>
