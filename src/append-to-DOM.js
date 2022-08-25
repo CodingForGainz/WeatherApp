@@ -29,7 +29,6 @@ function appendtoDOM(data, title) {
   statContainer.setAttribute('id', data);
   statContainer.setAttribute('class', 'data');
   statContainer.innerHTML = title + data;
-  console.log(data);
   output.appendChild(statContainer);
 }
 

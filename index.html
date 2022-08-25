@@ -8,21 +8,16 @@
   </head>
   <body>
     <div id="centralContainer">
-      <h1>Weather</h1>
+      <h1>How is the weather?</h1>
     </div>
 
     <div id="input">
-      <div id="cityContainer">
-        <p>City</p>
-        <input
-          type="text"
-          id="city"
-          placeholder="Enter Desired City"
-          value="Heredia"
-        />
+      <div id="inputContainer">
+        <p class="searchTitle">City</p>
+        <input type="text" id="city" placeholder="Heredia" value="Heredia" />
       </div>
-      <div id="countryContainer">
-        <p>Country</p>
+      <div id="inputContainer">
+        <p class="searchTitle">Country</p>
         <input
           type="text"
           id="country"
@@ -36,26 +31,23 @@
     <div id="output"><p id="outputText"></p></div>
 
     <script src="./dist/main.js"></script>
+    <footer>
+      <div id="creator">
+        <a href="https://github.com/andrescn20" class="footerItem">
+          <p class="footerItem">
+            Created by: <span class="boldText"> andrescn20 </span>
+          </p>
+          <img
+            class="footerItem"
+            id="gitHubLogo"
+            src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-48.png"
+        /></a>
+      </div>
+      <div id="credits">
+        <a class="footerItem" href="https://www.artstation.com/artwork/oAwbl4"
+          >Background by DavidFrasheski</a
+        >
+      </div>
+    </footer>
   </body>
-  <footer>
-    <div id="creator">
-      <a href="https://github.com/andrescn20" class="footerItem">
-        <p class="footerItem">
-          Created by: <span class="boldText"> andrescn20 </span>
-        </p>
-        <img
-          class="footerItem"
-          id="gitHubLogo"
-          src="https://cdn1.iconfinder.com/data/icons/logotypes/32/github-48.png"
-      /></a>
-    </div>
-    <div id="credits">
-      <a
-        class="footerItem"
-        href="https://www.freepik.com/free-vector/beautiful-illustration-sunny-landscape_16607912.htm#query=landscape&position=3&from_view=search"
-        >Image by macrovector</a
-      >
-      on <a class="footerItem" href="https://www.freepik.com/">Freepik</a>
-    </div>
-  </footer>
 </html>
