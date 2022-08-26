@@ -1,6 +1,7 @@
 :root {
   --dark-color: rgb(7, 53, 80);
   --light-color: rgba(18, 81, 117, 0.555);
+  --data-color: rgba(22, 59, 82, 0.637);
 }
 @font-face {
   font-family: Medieval;
@@ -27,42 +28,50 @@ body {
   background-repeat: no-repeat;
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 3fr 3fr 3fr;
-  grid-template-rows: 1fr 1fr 65px;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 55px;
   grid-auto-flow: row;
   font-family: Medieval;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: white;
-  text-shadow: var(--dark-color) 3px 2px;
-}
-#icon {
-  height: 100px;
-  width: 100px;
-}
-#centralContainer {
+#welcomeText {
   grid-area: 1/1/2/2;
   display: flex;
-  padding-top: 3rem;
-  justify-content: center;
-  align-items: flex-start;
+  padding-top: 15px;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
 }
+h1 {
+  font-size: 2.2rem;
+  color: white;
+  text-shadow: var(--dark-color) 3px 2px;
+  text-align: center;
+}
+#welcomeText p {
+  font-size: 1.6rem;
+  text-align: left;
+  margin: 20px;
+  text-shadow: var(--dark-color) 1px 1px;
+}
+
 #input {
-  grid-area: 1/2/2/3;
+  grid-area: 2/1/3/2;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  border-radius: 10px;
   flex-wrap: wrap;
-  padding-top: 3rem;
+  background-color: var(--data-color);
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 input {
   border: none;
-  border: solid 1px black;
-  height: 2rem;
+  border: solid 1.5px black;
+  height: 1.5rem;
   background-color: var(--light-color);
   border-radius: 10px;
   text-align: center;
@@ -86,7 +95,7 @@ footer {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 4px;
-  grid-area: 3/1/3/4;
+  grid-area: 4/1/5/4;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -118,10 +127,6 @@ footer {
   max-width: 36px;
 }
 
-.data {
-  flex-grow: 1;
-}
-
 button {
   color: black;
   width: 200px;
@@ -131,24 +136,82 @@ button {
 }
 
 #mainOutput {
-  grid-area: 1/3/2/4;
+  grid-area: 1/3/3/4;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-flow: row;
-  grid-auto-rows: 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding: 2rem;
 }
 
 #output {
-  grid-area: 2/1/3/4;
+  grid-area: 3/1/4/4;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
 }
 
 .statIcon {
   height: 20px;
   width: auto;
+  color: white;
+  height: 3rem;
+}
+.data {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1.2fr;
+  background-color: var(--data-color);
+  border-radius: 10px;
+  margin: 5px;
+  box-shadow: rgba(0, 0, 0, 0.712) 5px 3px 5px;
+}
+
+.data .iconContainer {
+  grid-area: 1/1/3/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.data .title {
+  grid-area: 1/2/2/3;
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.9rem;
+  justify-content: start;
+}
+.data .info {
+  grid-area: 2/2/4/3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  font-size: 1.5rem;
+}
+#weatherIcon {
+  grid-area: 2/2/3/3;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+}
+#weatherIcon img {
+  height: 95%;
+  border-radius: 10px;
+  /* background-color: var(--data-color); */
+}
+#City {
+  grid-area: 1/1/2/2;
+}
+#Temperature {
+  grid-area: 3/1/4/2;
+}
+
+#Weather {
+  grid-area: 2/1/3/2;
+}
+#Date {
+  grid-area: 4/1/5/2;
+  font-size: 0.2rem;
 }

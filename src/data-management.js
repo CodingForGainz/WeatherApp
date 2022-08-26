@@ -6,7 +6,6 @@ const unitsBtn = document.getElementById('units');
 
 const dataManagement = (data) => {
   let location = {
-    time: currentDate(),
     city: data.name,
     feels_like: data.main.feels_like,
     humidity: data.main.humidity,
@@ -33,10 +32,5 @@ function alternateUnits(system) {
   }
   return status.system;
 }
-
-const currentDate = () => {
-  const hours = getHours(new Date());
-  return hours;
-};
 
 export { dataManagement, alternateUnits };
