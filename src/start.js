@@ -8,11 +8,13 @@ function start() {
   let cityText = city.value;
   let countryText = country.value;
   output.innerHTML = '';
+  mainOutput.innerHTML = '';
   retrieveData(cityText, countryText, status.system);
 }
 
 function changeUnits() {
   output.innerHTML = '';
+  mainOutput.innerHTML = '';
   let cityText = city.value;
   let countryText = country.value;
   retrieveData(cityText, countryText, alternateUnits(status.system));

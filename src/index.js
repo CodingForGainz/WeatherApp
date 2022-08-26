@@ -5,7 +5,7 @@ const btn = document.getElementById('search');
 const city = document.getElementById('city');
 const country = document.getElementById('country');
 const output = document.getElementById('output');
-const outputText = document.getElementById('outputText');
+// const outputText = document.getElementById('outputText');
 const unitsBtn = document.getElementById('units');
 
 let status = {

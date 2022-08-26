@@ -1,8 +1,12 @@
 import { appendIcon, displayData } from './append-to-DOM';
 import { status } from './index';
+import { getHours } from 'date-fns';
+
+const unitsBtn = document.getElementById('units');
 
 const dataManagement = (data) => {
   let location = {
+    time: currentDate(),
     city: data.name,
     feels_like: data.main.feels_like,
     humidity: data.main.humidity,
@@ -22,10 +26,17 @@ const dataManagement = (data) => {
 function alternateUnits(system) {
   if (system === 'metric') {
     status.system = 'imperial';
+    unitsBtn.innerText = 'C';
   } else {
     status.system = 'metric';
+    unitsBtn.innerText = 'F';
   }
   return status.system;
 }
+
+const currentDate = () => {
+  const hours = getHours(new Date());
+  return hours;
+};
 
 export { dataManagement, alternateUnits };
