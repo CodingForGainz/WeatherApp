@@ -31,10 +31,22 @@ html {
     background-repeat: no-repeat;
   }
   #mainOutput {
+    grid-area: 1/3/3/4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 901px) {
+  #mainOutput {
+    grid-area: 1/3/3/4;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    padding-top: 1rem;
+    padding-bottom: 0px;
+    font-size: 2rem;
   }
 }
 
@@ -120,7 +132,7 @@ button {
     var(--dark-color) 60%,
     rgb(0, 0, 0) 100%
   );
-  box-shadow: white 2px 2px 1px;
+  box-shadow: white 1px 2px 1px;
   width: 100px;
   border: 1px solid rgba(255, 255, 255, 0.342);
 }
@@ -130,7 +142,7 @@ button:active {
   transform: translateY(2px);
 }
 
-#mainOutput {
+/* #mainOutput {
   grid-area: 1/3/3/4;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -138,7 +150,7 @@ button:active {
   padding-top: 1rem;
   padding-bottom: 0px;
   font-size: 2rem;
-}
+} */
 
 #output {
   grid-area: 3/1/4/4;
@@ -245,7 +257,7 @@ footer {
   grid-area: 4/1/5/4;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: var(--light-color);
   border-top: solid 2px var(--dark-color);
   width: 100%;
@@ -254,7 +266,6 @@ footer {
 .footerItem {
   margin: 8px;
   color: white;
-  /* font-weight: bold; */
 }
 
 #creator a {
@@ -268,7 +279,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+#creator {
+  margin-left: 10%;
 }
 #gitHubLogo {
   max-width: 36px;
+  flex-grow: 1;
 }

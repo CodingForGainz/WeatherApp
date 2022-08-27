@@ -17,7 +17,7 @@ document.body.addEventListener('keydown', (event) => {
   }
 });
 
-btn.onclick = start();
+btn.onclick = start;
 helpBtn.onclick = () => {
   alert(
     "If the Country is not the one you typed, try with its abreviation i.e. 'Costa Rica = CR.'"
