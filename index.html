@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather-App</title>
+    <title>NPC Weather</title>
   </head>
   <body>
     <div id="welcomeText">
@@ -16,25 +16,21 @@
     </div>
 
     <div id="input">
-      <div id="inputContainer">
+      <div class="inputContainer">
         <p class="searchTitle">City</p>
-        <input type="text" id="city" placeholder="Heredia" value="Heredia" />
+        <input type="text" id="city" placeholder="City" />
       </div>
-      <div id="inputContainer">
+      <div class="inputContainer">
         <p class="searchTitle">Country</p>
-        <input
-          type="text"
-          id="country"
-          placeholder="Enter Country or State"
-          value="CR"
-        />
+        <input type="text" id="country" placeholder="Country/State" />
       </div>
       <button id="search">Search</button>
-      <button id="units">Units</button>
+      <button id="units">°F</button>
     </div>
 
-    <div id="mainOutput"></div>
+    <button id="help">?</button>
 
+    <div id="mainOutput"></div>
     <div id="output"></div>
 
     <footer>

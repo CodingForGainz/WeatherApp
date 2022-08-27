@@ -1,4 +1,3 @@
-// import { alternateUnits } from './data-management';
 import { alternateUnits } from './data-management';
 import { retrieveData } from './retrieve-data';
 import { status } from './index';
@@ -17,7 +16,11 @@ function changeUnits() {
   mainOutput.innerHTML = '';
   let cityText = city.value;
   let countryText = country.value;
-  retrieveData(cityText, countryText, alternateUnits(status.system));
+  if (status.loaded === true) {
+    retrieveData(cityText, countryText, alternateUnits(status.system));
+  } else if (status.loaded === false) {
+    alternateUnits(status.system);
+  }
 }
 
 export { start, changeUnits };

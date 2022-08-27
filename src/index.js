@@ -2,15 +2,12 @@ import './main.css';
 import { changeUnits, start } from './start';
 
 const btn = document.getElementById('search');
-const city = document.getElementById('city');
-const country = document.getElementById('country');
-const output = document.getElementById('output');
-// const outputText = document.getElementById('outputText');
 const unitsBtn = document.getElementById('units');
+const helpBtn = document.getElementById('help');
 
 let status = {
-  loaded: false,
   system: 'metric',
+  loaded: false,
 };
 
 document.body.addEventListener('keydown', (event) => {
@@ -20,15 +17,13 @@ document.body.addEventListener('keydown', (event) => {
   }
 });
 
-btn.onclick = start();
-
-unitsBtn.onclick = () => {
-  if (status.loaded === true) {
-    changeUnits();
-  } else {
-    output.innerHTML = 'Please Search for a city before changing units.';
-  }
+btn.onclick = start;
+helpBtn.onclick = () => {
+  alert(
+    "If the Country is not the one you typed, try with its abreviation i.e. 'Costa Rica = CR.'"
+  );
 };
+unitsBtn.onclick = changeUnits;
 
 export { status };
 //Date, Temperature, Feels like, Humidity, Wind Speed, Chance of Rain, 'Weather State'

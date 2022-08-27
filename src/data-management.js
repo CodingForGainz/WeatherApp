@@ -1,6 +1,5 @@
 import { appendIcon, displayData } from './append-to-DOM';
 import { status } from './index';
-import { getHours } from 'date-fns';
 
 const unitsBtn = document.getElementById('units');
 
@@ -25,12 +24,11 @@ const dataManagement = (data) => {
 function alternateUnits(system) {
   if (system === 'metric') {
     status.system = 'imperial';
-    unitsBtn.innerText = 'C';
+    unitsBtn.innerText = '°C';
   } else {
     status.system = 'metric';
-    unitsBtn.innerText = 'F';
+    unitsBtn.innerText = '°F';
   }
   return status.system;
 }
-
 export { dataManagement, alternateUnits };

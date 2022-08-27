@@ -7,8 +7,8 @@ async function retrieveData(city, country, unitSystem) {
     const weatherData = await response.json();
     dataManagement(weatherData);
   } catch (error) {
-    output.innerHTML =
-      "We couldn't find this city. Please, make sure of the following:<ul><li>City name is spelled correctly.</li><li>Country uses only Initials i.e. Costa Rica = CR.</li><li>There are no numbers in your inputs.</li></ul>";
+    mainOutput.innerHTML =
+      "<div id= 'error'> We couldn't find this location. Make sure you spelled the city name Correctly. </div>";
   }
 }
 
