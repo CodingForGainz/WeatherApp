@@ -189,7 +189,7 @@ button:active {
 }
 
 #output .data {
-  animation-duration: 2s;
+  animation-duration: 1.5s;
   background-color: rgba(52, 73, 97, 0.815);
   width: fit-content;
 }
@@ -220,6 +220,7 @@ button:active {
   align-items: center;
   justify-content: start;
   height: 100%;
+  animation: appear 0.8s ease-in-out 0s 1;
 }
 #weatherIcon img {
   height: 95%;

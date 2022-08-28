@@ -1,15 +1,14 @@
-import windIcon from './winds.png';
-import countryIcon from './country.png';
-import feelsIcon from './feels.png';
-import humidityIcon from './humidity.png';
-import cloudsIcon from './clouds.png';
-import dateIcon from './date.png';
-import cityIcon from './city.png';
-import weatherIcon from './weather.png';
-import tempIcon from './temp.png';
+import windIcon from './Icons/winds.png';
+import countryIcon from './Icons/country.png';
+import feelsIcon from './Icons/feels.png';
+import humidityIcon from './Icons/humidity.png';
+import cloudsIcon from './Icons/clouds.png';
+import dateIcon from './Icons/date.png';
+import cityIcon from './Icons/city.png';
+import weatherIcon from './Icons/weather.png';
+import tempIcon from './Icons/temp.png';
 import _ from 'lodash';
 import { getDate } from 'date-fns';
-import format from 'date-fns/format';
 
 const output = document.getElementById('output');
 
