@@ -7,7 +7,7 @@ async function retrieveData(city, country, unitSystem) {
     const weatherData = await response.json();
     dataManagement(weatherData);
   } catch (error) {
-    mainOutput.innerHTML =
+    output.innerHTML =
       "<div id= 'error'> We couldn't find this location. Make sure you spelled the city name Correctly. </div>";
   }
 }

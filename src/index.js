@@ -1,7 +1,7 @@
 import './main.css';
 import { changeUnits, start } from './start';
 
-const btn = document.getElementById('search');
+const searchBtn = document.getElementById('search');
 const unitsBtn = document.getElementById('units');
 const helpBtn = document.getElementById('help');
 
@@ -17,7 +17,8 @@ document.body.addEventListener('keydown', (event) => {
   }
 });
 
-btn.onclick = start;
+searchBtn.onclick = start;
+
 helpBtn.onclick = () => {
   alert(
     "If the Country is not the one you typed, try with its abreviation i.e. 'Costa Rica = CR.'"
@@ -26,4 +27,3 @@ helpBtn.onclick = () => {
 unitsBtn.onclick = changeUnits;
 
 export { status };
-//Date, Temperature, Feels like, Humidity, Wind Speed, Chance of Rain, 'Weather State'
