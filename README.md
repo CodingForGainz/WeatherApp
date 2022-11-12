@@ -1,6 +1,6 @@
 ## Explanation
 
-This app enables the user to ask for the current weather information of any country in the world. 
+This app enables the user to ask for the current weather information of any city in the world. 
 Information is requested in real time to [Open Weather](https://openweathermap.org/). 
 Built entirely on vanilla JS, HTML and CSS.
 
